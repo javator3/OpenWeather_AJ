@@ -10,7 +10,7 @@ public class Main {
                 "http://api.apixu.com/v1/current.json",
                 "705dc215140747bbaba91901191002"
         );
-        String city ;
+        String city;
         Scanner scanner = new Scanner(System.in);
         System.out.println("Miasto: ");
         while (!(city = scanner.nextLine()).equals("")) {
