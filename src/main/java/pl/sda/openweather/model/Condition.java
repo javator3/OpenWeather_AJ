@@ -6,7 +6,10 @@ public class Condition {
     private String icon;
     private int code;
 
-    public Condition(){}
+    public Condition() {
+
+    }
+
 
     public Condition(String text, String icon, int code) {
         this.text = text;
@@ -36,5 +39,14 @@ public class Condition {
 
     public void setCode(int code) {
         this.code = code;
+    }
+
+    @Override
+    public String toString() {
+        return "Condition{" +
+                "text='" + text + '\'' +
+                ", icon='" + icon + '\'' +
+                ", code=" + code +
+                '}';
     }
 }

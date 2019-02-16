@@ -1,33 +1,35 @@
 package pl.sda.openweather.model;
 
-public class Current {
+import pl.sda.openweather.model.Condition;
 
-    private Condition condition;
+public class Current {
 
     private int last_updated_epoch;
     private String last_updated;
-    private float temp_c;
-    private float temp_f;
+    private double temp_c;
+    private double temp_f;
     private int is_day;
-    private float wind_mph;
-    private float wind_kph;
-    private float wind_degree;
+    private double wind_mph;
+    private double wind_kph;
+    private int wind_degree;
     private String wind_dir;
-    private float pressure_mb;
-    private float pressure_in;
+    private int pressure_mb;
+    private int pressure_in;
     private int precip_mm;
     private int precip_in;
-    private float humidity;
-    private float cloud;
-    private float feelslike_c;
-    private float feelslike_f;
-    private float vis_km;
-    private float vis_miles;
-    private float uv;
+    private int humidity;
+    private int cloud;
+    private double feelslike_c;
+    private double feelslike_f;
+    private int vis_km;
+    private int vis_miles;
+    private int uv;
+    private Condition condition;
 
-    public Current (){}
+    public Current() {
+    }
 
-    public Current(Condition condition, int last_updated_epoch, String last_updated, float temp_c, float temp_f, int is_day, float wind_mph, float wind_kph, float wind_degree, String wind_dir, float pressure_mb, float pressure_in, int precip_mm, int precip_in, float humidity, float cloud, float feelslike_c, float feelslike_f, float vis_km, float vis_miles, float uv) {
+    public Current(Condition condition, int last_updated_epoch, String last_updated, double temp_c, double temp_f, int is_day, double wind_mph, double wind_kph, int wind_degree, String wind_dir, int pressure_mb, int pressure_in, int precip_mm, int precip_in, int humidity, int cloud, double feelslike_c, double feelslike_f, int vis_km, int vis_miles, int uv) {
         this.condition = condition;
         this.last_updated_epoch = last_updated_epoch;
         this.last_updated = last_updated;
@@ -51,14 +53,6 @@ public class Current {
         this.uv = uv;
     }
 
-    public Condition getCondition() {
-        return condition;
-    }
-
-    public void setCondition(Condition condition) {
-        this.condition = condition;
-    }
-
     public int getLast_updated_epoch() {
         return last_updated_epoch;
     }
@@ -75,19 +69,19 @@ public class Current {
         this.last_updated = last_updated;
     }
 
-    public float getTemp_c() {
+    public double getTemp_c() {
         return temp_c;
     }
 
-    public void setTemp_c(float temp_c) {
+    public void setTemp_c(double temp_c) {
         this.temp_c = temp_c;
     }
 
-    public float getTemp_f() {
+    public double getTemp_f() {
         return temp_f;
     }
 
-    public void setTemp_f(float temp_f) {
+    public void setTemp_f(double temp_f) {
         this.temp_f = temp_f;
     }
 
@@ -99,27 +93,27 @@ public class Current {
         this.is_day = is_day;
     }
 
-    public float getWind_mph() {
+    public double getWind_mph() {
         return wind_mph;
     }
 
-    public void setWind_mph(float wind_mph) {
+    public void setWind_mph(double wind_mph) {
         this.wind_mph = wind_mph;
     }
 
-    public float getWind_kph() {
+    public double getWind_kph() {
         return wind_kph;
     }
 
-    public void setWind_kph(float wind_kph) {
+    public void setWind_kph(double wind_kph) {
         this.wind_kph = wind_kph;
     }
 
-    public float getWind_degree() {
+    public int getWind_degree() {
         return wind_degree;
     }
 
-    public void setWind_degree(float wind_degree) {
+    public void setWind_degree(int wind_degree) {
         this.wind_degree = wind_degree;
     }
 
@@ -131,19 +125,19 @@ public class Current {
         this.wind_dir = wind_dir;
     }
 
-    public float getPressure_mb() {
+    public int getPressure_mb() {
         return pressure_mb;
     }
 
-    public void setPressure_mb(float pressure_mb) {
+    public void setPressure_mb(int pressure_mb) {
         this.pressure_mb = pressure_mb;
     }
 
-    public float getPressure_in() {
+    public int getPressure_in() {
         return pressure_in;
     }
 
-    public void setPressure_in(float pressure_in) {
+    public void setPressure_in(int pressure_in) {
         this.pressure_in = pressure_in;
     }
 
@@ -163,60 +157,68 @@ public class Current {
         this.precip_in = precip_in;
     }
 
-    public float getHumidity() {
+    public int getHumidity() {
         return humidity;
     }
 
-    public void setHumidity(float humidity) {
+    public void setHumidity(int humidity) {
         this.humidity = humidity;
     }
 
-    public float getCloud() {
+    public int getCloud() {
         return cloud;
     }
 
-    public void setCloud(float cloud) {
+    public void setCloud(int cloud) {
         this.cloud = cloud;
     }
 
-    public float getFeelslike_c() {
+    public double getFeelslike_c() {
         return feelslike_c;
     }
 
-    public void setFeelslike_c(float feelslike_c) {
+    public void setFeelslike_c(double feelslike_c) {
         this.feelslike_c = feelslike_c;
     }
 
-    public float getFeelslike_f() {
+    public double getFeelslike_f() {
         return feelslike_f;
     }
 
-    public void setFeelslike_f(float feelslike_f) {
+    public void setFeelslike_f(double feelslike_f) {
         this.feelslike_f = feelslike_f;
     }
 
-    public float getVis_km() {
+    public int getVis_km() {
         return vis_km;
     }
 
-    public void setVis_km(float vis_km) {
+    public void setVis_km(int vis_km) {
         this.vis_km = vis_km;
     }
 
-    public float getVis_miles() {
+    public int getVis_miles() {
         return vis_miles;
     }
 
-    public void setVis_miles(float vis_miles) {
+    public void setVis_miles(int vis_miles) {
         this.vis_miles = vis_miles;
     }
 
-    public float getUv() {
+    public int getUv() {
         return uv;
     }
 
-    public void setUv(float uv) {
+    public void setUv(int uv) {
         this.uv = uv;
+    }
+
+    public Condition getCondition() {
+        return condition;
+    }
+
+    public void setCondition(Condition condition) {
+        this.condition = condition;
     }
 
     @Override
@@ -231,7 +233,7 @@ public class Current {
                 ", wind_mph=" + wind_mph +
                 ", wind_kph=" + wind_kph +
                 ", wind_degree=" + wind_degree +
-                ", wind_dir='" + wind_dir + '\'' +
+                ", ind_dir='" + wind_dir + '\'' +
                 ", pressure_mb=" + pressure_mb +
                 ", pressure_in=" + pressure_in +
                 ", precip_mm=" + precip_mm +
@@ -244,5 +246,8 @@ public class Current {
                 ", vis_miles=" + vis_miles +
                 ", uv=" + uv +
                 '}';
+    }
+
+    public static void getTempForCity(String city) {
     }
 }

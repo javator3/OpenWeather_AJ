@@ -8,12 +8,15 @@ public class Location {
     private float lat;
     private float lon;
     private String tz_id;
-    private String localtime_epoch;
+    private int localtime_epoch;
     private String localtime;
 
-    public Location (){}
 
-    public Location(String name, String region, String country, float lat, float lon, String tz_id, String localtime_epoch, String localtime) {
+    public Location() {
+
+    }
+
+    public Location(String name, String region, String country, float lat, float lon, String tz_id, int localtime_epoch, String localtime) {
         this.name = name;
         this.region = region;
         this.country = country;
@@ -72,11 +75,11 @@ public class Location {
         this.tz_id = tz_id;
     }
 
-    public String getLocaltime_epoch() {
+    public int getLocaltime_epoch() {
         return localtime_epoch;
     }
 
-    public void setLocaltime_epoch(String localtime_epoch) {
+    public void setLocaltime_epoch(int localtime_epoch) {
         this.localtime_epoch = localtime_epoch;
     }
 
@@ -97,7 +100,7 @@ public class Location {
                 ", lat=" + lat +
                 ", lon=" + lon +
                 ", tz_id='" + tz_id + '\'' +
-                ", localtime_epoch='" + localtime_epoch + '\'' +
+                ", localtime_epoch=" + localtime_epoch +
                 ", localtime='" + localtime + '\'' +
                 '}';
     }

@@ -1,58 +1,69 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
 <?import javafx.scene.control.TextField?>
-<?import javafx.scene.effect.Bloom?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
-<?import javafx.scene.text.Font?>
-<?import javafx.scene.text.Text?>
 
-<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1"
-      fx:controller="pl.sda.openweather.controller.RootController">
+<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pl.sda.openweather.controller.RootController">
     <children>
+        <MenuBar VBox.vgrow="NEVER">
+            <menus>
+                <Menu mnemonicParsing="false" text="Nie">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="New" />
+                        <MenuItem mnemonicParsing="false" text="Open…" />
+                        <Menu mnemonicParsing="false" text="Open Recent" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem mnemonicParsing="false" text="Close" />
+                        <MenuItem mnemonicParsing="false" text="Save" />
+                        <MenuItem mnemonicParsing="false" text="Save As…" />
+                        <MenuItem mnemonicParsing="false" text="Revert" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem mnemonicParsing="false" text="Preferences…" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem mnemonicParsing="false" text="Quit" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Wciskaj">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="Undo" />
+                        <MenuItem mnemonicParsing="false" text="Redo" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem mnemonicParsing="false" text="Cut" />
+                        <MenuItem mnemonicParsing="false" text="Copy" />
+                        <MenuItem mnemonicParsing="false" text="Paste" />
+                        <MenuItem mnemonicParsing="false" text="Delete" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem mnemonicParsing="false" text="Select All" />
+                        <MenuItem mnemonicParsing="false" text="Unselect All" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Tego">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="About MyHelloApp" />
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
         <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
             <children>
-                <Label layoutX="135.0" layoutY="88.0" prefHeight="25.0" prefWidth="89.0" text="Podaj Miasto">
-                    <font>
-                        <Font name="Times New Roman Bold Italic" size="15.0"/>
-                    </font>
-                </Label>
-                <TextField fx:id="city" layoutX="246.0" layoutY="88.0"/>
-                <Button onAction="#setCity" fx:id="search" layoutX="421.0" layoutY="88.0" mnemonicParsing="false"
-                        text="Szukaj"/>
-                <Label layoutX="79.0" layoutY="192.0" text="Temperatura wynosi:">
-                    <font>
-                        <Font fx:id="tempLabel" name="Courier New Bold" size="20.0"/>
-                    </font>
-                </Label>
-                <Label layoutX="324.0" layoutY="189.0">
-                    <font>
-                        <Font fx:id="tempLabel1" name="Courier New Bold" size="20.0"/>
-                    </font>
-                </Label>
-
-                <Label layoutX="79.0" layoutY="249.0" text="Temperatura odczuwalna:">
-                    <font>
-                        <Font name="Courier New Bold" size="20.0"/>
-                    </font>
-                </Label>
-                <Label fx:id="" layoutX="379.0" layoutY="245.0">
-                    <font>
-                        <Font name="Courier New Bold" size="20.0"/>
-                    </font>
-                </Label>
+                <Label layoutX="229.0" layoutY="116.0" prefHeight="17.0" prefWidth="166.0" text="Podaj miasto" />
+                <Label />
+                <TextField fx:id="city" layoutX="209.0" layoutY="152.0" />
+                <Button fx:id="search" layoutX="418.0" layoutY="152.0" mnemonicParsing="false" onAction="#setCity" text="Pobierz" />
+                <Label fx:id="temp" layoutX="106.0" layoutY="196.0" prefHeight="17.0" prefWidth="69.0" text="Temperatura" />
+                <Label fx:id="feelTemp" layoutX="106.0" layoutY="240.0" text="Temperatura odczuwalna" />
+                <Label fx:id="realResult" layoutX="404.0" layoutY="205.0" text="0.0 Celsjusza" />
+                <Label fx:id="feelResult" layoutX="404.0" layoutY="240.0" text="0.0 Celsjusza" />
+                <ImageView fx:id="weatherImage" fitHeight="95.0" fitWidth="92.0" layoutX="274.0" layoutY="258.0" pickOnBounds="true" preserveRatio="true" />
             </children>
-            <effect>
-                <Bloom threshold="1.0"/>
-            </effect>
         </AnchorPane>
-        <Text strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="142.99999618530273">
-            <font>
-                <Font size="20.0"/>
-            </font>
-        </Text>
     </children>
 </VBox>
